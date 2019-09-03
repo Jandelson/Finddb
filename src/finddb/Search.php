@@ -7,7 +7,7 @@ class Search
     private $db;
     private $campos = ['TABLE_SCHEMA','TABLE_NAME','COLUMN_NAME','COLUMN_TYPE'];
     public $campo;
-    
+
     public function setDB($db)
     {
         $this->db = $db;
@@ -16,7 +16,11 @@ class Search
     public function searchData($campo)
     {
         $this->campo = $campo;
-        
+
+        if (empty($this->campo)) {
+            return;
+        }
+
         $this->campos = implode(",", $this->campos);
 
         $query = $this->db->createQueryBuilder();
@@ -28,7 +32,7 @@ class Search
 
         $statement = $query->execute();
         $dados = $statement->fetchAll();
-        
+
         return $dados;
     }
 }
