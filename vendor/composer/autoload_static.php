@@ -33,6 +33,10 @@ class ComposerStaticInit6b7bd37d8a533f2ce39585d3f88c5234
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
         ),
+        'A' => 
+        array (
+            'ActiveRouter\\' => 13,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -75,6 +79,10 @@ class ComposerStaticInit6b7bd37d8a533f2ce39585d3f88c5234
         'Doctrine\\Common\\Annotations\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
+        'ActiveRouter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jandelson/active-router/src',
         ),
     );
 

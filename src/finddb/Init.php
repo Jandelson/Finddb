@@ -5,6 +5,7 @@ use \Doctrine\DBAL\Configuration;
 use \Doctrine\DBAL\DriverManager;
 use \Twig\Loader\FilesystemLoader;
 use \Twig\Environment;
+use \ActiveRouter\Router;
 use \finddb\Search;
 use \Symfony\Component\Dotenv\Dotenv;
 
