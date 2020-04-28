@@ -30,7 +30,7 @@ class Init
 
         $db = DriverManager::getConnection($connectionParams, $config);
         $loader = new FilesystemLoader('views');
-        
+
         $twig = new Environment($loader);
         $search = new Search();
         $search->setDB($db);
@@ -42,8 +42,8 @@ class Init
                 'dados' => $dados
             ]);
         } catch (\Exception $e) {
-            echo $e->getMessage().'<br>';
-            echo 'Verificar arquivo de configuração .env';
+            echo $e->getMessage() . '<br>';
+            echo 'Renomear .env_exemplo para .env arquivo de configuração com o banco de dados!';
         }
     }
 }
