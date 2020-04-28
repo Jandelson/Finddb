@@ -27,7 +27,10 @@ class Search
 
         $query->select($this->campos)
             ->from('INFORMATION_SCHEMA.COLUMNS', 'data')
-            ->where('data.TABLE_SCHEMA = "sogamax" AND data.COLUMN_NAME like "%'.$this->campo.'%"')
+            ->where(
+                'data.TABLE_SCHEMA = "' . $_ENV['DB_DATABASE'] . '"
+                AND data.COLUMN_NAME like "%' . $this->campo . '%"'
+            )
             ->orderBy('data.ORDINAL_POSITION', 'ASC');
 
         $statement = $query->execute();

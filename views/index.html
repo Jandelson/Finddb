@@ -28,19 +28,14 @@
       <th class="text-center">Tabela</th>
       <th class="text-center">Coluna</th>
       <th class="text-center">Tipo</th>
-      <tr>
+        {% for d in dados %}
+              <tr>
+                  <td>{{d.TABLE_NAME}}</td>
+                  <td>{{d.COLUMN_NAME}}</td>
+                  <td>{{d.COLUMN_TYPE}}</td>
+              </tr>
+        {% endfor %}
   </tbody>
-</table>
-<table id="tabela"  class="table table-bordered table-dark">
-    {% for d in dados %}
-    <tbody>
-          <tr>
-              <td>{{d.TABLE_NAME}}</td>
-              <td>{{d.COLUMN_NAME}}</td>
-              <td>{{d.COLUMN_TYPE}}</td>
-          </tr>
-      </tbody>
-    {% endfor %}
 </table>
 </div>;
 </body>
