@@ -2,7 +2,11 @@
 
 require 'vendor/autoload.php';
 
-$router = new \ActiveRouter\Router();
-$router->newRouter('/', 'finddb\Init');
-$router->newRouter('/search', 'finddb\Init');
-$router->run();
+try {
+    $router = new \ActiveRouter\Router();
+    $router->newRouter('/', 'finddb\Init');
+    $router->newRouter('/search', 'finddb\Init');
+    $router->run();
+} catch (\Exception $error) {
+    echo $error->getMessage();
+}
