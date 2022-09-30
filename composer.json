@@ -5,7 +5,7 @@
     "homepage": "https://github.com/Jandelson/",
     "require": {
         "php": ">=7.0",
-        "twig/twig":"^1.0",
+        "twig/twig":"^2.15",
         "doctrine/dbal": "2.3.*",
         "symfony/dotenv": "^4.3",
         "jandelson/active-router": "dev-master"
